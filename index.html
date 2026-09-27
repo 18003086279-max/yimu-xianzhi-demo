@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#245842" />
+  <title>一亩先知｜V0.3.2 Web Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="demo-banner">合成演示数据｜仅用于说明产品机制，不代表真实生产效果</div>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">一</div>
+        <div><strong>一亩先知</strong><small>V0.3.2 Web Demo</small></div>
+      </div>
+      <nav id="nav"></nav>
+      <div class="side-note">
+        <span>校赛演示版</span>
+        <small>订单履约风险决策<br>与产能承诺机制</small>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">华南露地叶菜产销协同决策系统</span>
+          <h1 id="pageTitle">今日任务</h1>
+        </div>
+        <div class="top-actions">
+          <span class="status-pill" id="systemStatus">规则版本 R1a / O1</span>
+          <button class="ghost" id="resetBtn">重置演示</button>
+        </div>
+      </header>
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
