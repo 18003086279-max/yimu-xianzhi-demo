@@ -1,40 +1,80 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#245842" />
-  <title>一亩先知｜V0.3.2 Web Demo</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="demo-banner">合成演示数据｜仅用于说明产品机制，不代表真实生产效果</div>
-  <div class="app-shell">
-    <aside class="sidebar">
-      <div class="brand">
-        <div class="brand-mark">一</div>
-        <div><strong>一亩先知</strong><small>V0.3.2 Web Demo</small></div>
-      </div>
-      <nav id="nav"></nav>
-      <div class="side-note">
-        <span>校赛演示版</span>
-        <small>订单履约风险决策<br>与产能承诺机制</small>
-      </div>
-    </aside>
-    <main class="main">
-      <header class="topbar">
-        <div>
-          <span class="eyebrow">华南露地叶菜产销协同决策系统</span>
-          <h1 id="pageTitle">今日任务</h1>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#173b2e" />
+    <meta
+      name="description"
+      content="一亩先知校赛演示：以合成数据展示合作社订单风险、产能承诺和接单经济门。"
+    />
+    <title>一亩先知 · 合作社收获台账</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">跳到主要内容</a>
+    <div class="demo-banner">
+      <strong>合成演示数据</strong
+      ><span>校赛机制演示 · 不代表真实生产效果</span>
+    </div>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#today" aria-label="一亩先知首页"
+          ><span class="brand-mark">一</span
+          ><span
+            ><strong>一亩先知</strong><small>合作社收获台账</small></span
+          ></a
+        >
+        <nav id="nav" aria-label="主导航"></nav>
+        <div class="side-note">
+          <strong>把收获，变成有据的承诺。</strong>
+          <p>华南露地叶菜<br />产销协同决策演示</p>
+          <span>校赛展示版 · V0.4</span>
         </div>
-        <div class="top-actions">
-          <span class="status-pill" id="systemStatus">规则版本 R1a / O1</span>
-          <button class="ghost" id="resetBtn">重置演示</button>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <h1 id="pageTitle">今日总览</h1>
+          <div class="top-actions">
+            <label class="role-label" for="roleSelect"
+              >演示角色<select id="roleSelect">
+                <option value="manager">合作社调度员</option>
+                <option value="supplier">供应方成员</option>
+                <option value="viewer">评委 / 只读</option>
+              </select></label
+            >
+            <button class="ghost" id="exportBtn">导出演示摘要</button
+            ><button class="ghost" id="resetBtn">重置演示</button>
+          </div>
+        </header>
+        <div class="workspace-meta">
+          <span>演示日 2026.09.27 · 菜心台账</span><span id="roleHint"></span>
         </div>
-      </header>
-      <section id="content" class="content"></section>
-    </main>
-  </div>
-  <script src="app.js"></script>
-</body>
+        <section
+          id="content"
+          class="content"
+          tabindex="-1"
+          aria-labelledby="pageTitle"
+        ></section>
+        <footer>
+          <strong>一亩先知 · 校赛演示版 V0.4</strong>
+          <p>
+            订单、供应方、天气、价格与履约记录均为合成演示数据。规则用于解释产品机制，未经真实生产验证，不构成接单或种植建议。角色切换为前端视角演示，不具备身份认证功能。
+          </p>
+          <span
+            >纯静态网页 · 数据仅保留在本次页面会话，刷新或重置即恢复初始场景 ·
+            无后台服务</span
+          >
+        </footer>
+      </main>
+    </div>
+    <div
+      id="toast"
+      class="toast"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+  </body>
 </html>
