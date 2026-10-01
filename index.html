@@ -1878,6 +1878,68 @@ body.glass-clear-reading .glass-lens::after{display:none}
  .role-nav button{min-height:56px}.glass-reading-toggle{width:100%}
 }
 @media(prefers-reduced-motion:reduce){.cover-main-glass{transform:none}.cover-specular{opacity:.30}.button,.toolbar-button,.role-choice-card{transition:none}.button:active{transform:none}}
+
+/* 新决策入口沿用已确认的玻璃材质；正文与数据图使用稳定阅读面。 */
+.core-region[hidden],.core-workflow[hidden]{display:none!important}
+.core-workflow{margin:0 0 28px;padding:0 0 24px;border-bottom:1px solid var(--ui-border);color:var(--ui-text-body)}
+.core-workflow>p{margin:0 0 14px;font-size:14px}
+.core-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.core-steps button{display:grid;grid-template-columns:28px 1fr;align-items:center;gap:4px 8px;min-height:72px;padding:12px 14px;border:1px solid var(--ui-border);border-radius:14px;background:rgba(243,242,240,.72);color:var(--ui-text-strong);text-align:left;font:inherit;cursor:pointer}
+.core-steps button>span{grid-row:1/3;font-size:20px;color:var(--ui-text-muted)}
+.core-steps button strong{font-size:16px;line-height:1.4}
+.core-steps button small{font-size:12px;color:var(--ui-text-muted)}
+.core-steps button:hover{background:rgba(243,242,240,.94)}
+.core-steps button[aria-current="page"]{background:#50688F;border-color:#50688F;color:#F7F8FA}
+.core-steps button[aria-current="page"] span,.core-steps button[aria-current="page"] small{color:#F7F8FA}
+.core-region{margin-bottom:24px;display:grid;gap:24px;min-width:0}
+.core-region .surface{background:var(--ui-surface-dense);min-width:0;padding:24px}
+.core-region h2{margin:0 0 12px}.core-region h3{margin:22px 0 10px}
+.core-region p{line-height:1.65;color:var(--ui-text-body);max-width:75ch}
+.core-region .note{font-size:14px;color:var(--ui-text-muted)}
+.core-two-columns{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px}
+.core-plot-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0;background:rgba(243,242,240,.9);padding:12px;border-radius:16px}
+.core-plot-grid button{display:flex;flex-direction:column;justify-content:center;gap:8px;min-height:108px;border:1px solid var(--ui-border);border-radius:12px;background:rgba(90,115,110,.08);padding:14px;text-align:left;color:var(--ui-text-strong);font:inherit;cursor:pointer}
+.core-plot-grid button strong{font-size:16px;line-height:1.5}.core-plot-grid button small{font-size:12px;color:var(--ui-text-muted)}
+.core-plot-grid button[aria-pressed="true"]{outline:2px solid #50688F;outline-offset:2px;background:rgba(80,104,143,.12)}
+.core-facts{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 16px;margin:18px 0;font-size:14px;line-height:1.6}
+.core-facts dt{color:var(--ui-text-muted)}.core-facts dd{margin:0;color:var(--ui-text-strong);overflow-wrap:anywhere}
+.core-monitor-list{padding:0;margin:0;list-style:none}
+.core-monitor-list li{padding:14px 0;border-top:1px solid var(--ui-border);line-height:1.7;font-size:14px}
+.core-monitor-list li strong{display:block;color:var(--ui-text-strong)}
+.core-table-wrap{max-width:100%;overflow-x:auto;border-radius:12px;background:rgba(243,242,240,.94)}
+.core-table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55;color:var(--ui-text-body);text-align:left}
+.core-table th,.core-table td{padding:14px 16px;border-bottom:1px solid var(--ui-border);vertical-align:top;overflow-wrap:anywhere}
+.core-table th{color:var(--ui-text-muted);font-weight:500;white-space:nowrap}
+.core-table td strong{color:var(--ui-text-strong)}.core-table small{display:block;margin-top:6px;color:var(--ui-text-muted);font-size:12px}
+.core-forecast{display:grid;gap:18px;margin:20px 0}
+.core-forecast-row{display:grid;grid-template-columns:140px minmax(0,1fr) 88px;gap:14px;align-items:center;font-size:14px}
+.core-forecast-row strong{color:var(--ui-text-strong)}.core-forecast-row small{display:block;color:var(--ui-text-muted);font-size:12px}
+.core-bar{height:18px;border-radius:5px;background:rgba(80,104,143,.13);overflow:hidden}
+.core-bar span{height:100%;display:block;background:#50688F;min-width:0}
+.core-bar-actual{display:inline-block;width:10px;height:10px;margin-right:5px;background:#5A736E;border-radius:2px}
+.core-status{display:inline-block;border-radius:8px;padding:5px 9px;background:rgba(90,115,110,.13);color:#35465C;font-size:12px;line-height:1.5}
+.core-status--warning{color:#763C16;background:#F4E9D8}.core-status--danger{color:#8D3640;background:#F4E3E7}
+.core-summary{font-size:20px;line-height:1.6!important;color:var(--ui-text-strong)!important;font-weight:600}
+.core-boundary{padding:14px 16px;background:rgba(243,242,240,.94);border-radius:12px;font-size:14px;line-height:1.6}
+.core-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.core-region .button{min-height:48px;white-space:normal;text-align:center}
+.core-source-parts{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.core-source-parts span{padding:8px 12px;border-radius:8px;background:rgba(243,242,240,.9);font-size:14px}
+@media(max-width:1000px){.core-two-columns{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){
+ .core-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.core-steps button{min-height:84px;grid-template-columns:1fr;gap:6px;padding:10px;align-content:center}
+ .core-steps button>span{grid-row:auto;font-size:16px}.core-steps button small{display:none}.core-steps button strong{font-size:14px;min-height:40px}
+ .core-region .surface{padding:20px 16px}.core-plot-grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:10px}.core-plot-grid button{padding:12px;min-height:100px}
+ .core-forecast-row{grid-template-columns:92px minmax(0,1fr) 66px;gap:8px;font-size:12px}.core-summary{font-size:18px}
+ .core-facts{grid-template-columns:1fr;gap:4px}.core-facts dd{margin-bottom:12px}
+ .core-table{min-width:0;display:block}.core-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .core-table tbody{display:block;padding:4px 12px}.core-table tr{display:block;padding:10px 0;border-bottom:1px solid var(--ui-border)}.core-table tr:last-child{border-bottom:0}
+ .core-table td{display:grid;grid-template-columns:76px minmax(0,1fr);gap:4px 12px;padding:8px 0;border:0}
+ .core-table td::before{content:attr(data-label);color:var(--ui-text-muted)}.core-table td small{grid-column:2;margin-top:0}.core-table td[colspan]{display:block}
+ .core-actions>.button{flex:1 1 100%;min-height:56px}
+}
+@media(prefers-contrast:more){.core-region .surface,.core-steps button,.core-table-wrap,.core-plot-grid{background:#F3F2F0}.core-plot-grid button{border-color:#35465C}}
+body.glass-clear .core-region .surface{background:#F3F2F0;backdrop-filter:none}
   </style>
   <script>
 /* 一亩先知：可重置的演示样例，数量单位统一为斤。 */
@@ -4942,6 +5004,129 @@ function init(){
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
 </script>
+  <script>
+/* 三页决策流程的展示层：只读取原模型，保存与确认仍由原表单和按钮完成。 */
+(function(global){
+'use strict';
+const $=(s)=>document.querySelector(s);
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num=x=>Number(x||0),qty=x=>num(x).toLocaleString('zh-CN',{maximumFractionDigits:1})+' 斤';
+const at=x=>x?String(x).slice(5,16).replace('T',' '):'未登记';
+const context=()=>global.YimuRoleHost?.getContext();
+const button=(action,label,extra='')=>`<button type="button" class="button button--quiet" data-core-action="${action}" ${extra}>${label}</button>`;
+let remedyPage='trial',selectedPlot='',queued=false;
+let originals;
+// 固定历史采样样例，不冒充实时采集，不写入账本或驱动估产。
+const sampleReadings=Object.freeze({
+ 'PLOT-01':{temperature:21.4,humidity:78},'PLOT-02':{temperature:23.8,humidity:82},
+ 'PLOT-03':{temperature:20.6,humidity:86},'PLOT-04':{temperature:21.0,humidity:79},
+ 'PLOT-05':{temperature:20.8,humidity:76},'PLOT-06':{temperature:23.4,humidity:80}
+});
+function monitoringSample(plotId){
+ const s=sampleReadings[plotId];
+ return `<h3>温湿度模拟采样</h3><span class="core-status">模拟历史样例 · 非实时设备数据</span><dl class="core-facts"><dt>采样时间</dt><dd>${s?'2026-10-18 15:30（固定样例）':'暂无该田块的模拟采样'}</dd><dt>空气温度</dt><dd>${s?s.temperature.toFixed(1)+' ℃':'无样例，当前未知'}</dd><dt>空气相对湿度</dt><dd>${s?s.humidity+'% RH':'无样例，当前未知'}</dd><dt>土壤含水率</dt><dd>未接入设备，未提供样例</dd></dl><p class="note">样例不随演示时钟更新，不代表此刻天气；未连接传感器，不参与减产计算或自动估产。</p>`;
+}
+const liveBatches=v=>v.batches.filter(b=>!b.archived);
+const mainBatches=v=>liveBatches(v).filter(b=>b.allocations?.some(a=>a.orderId===v.order.id));
+const plan=v=>v.order.effectivePlan||v.draft||v.plans[0];
+const planState=v=>v.order.effectivePlan?'正式安排已启用':v.draft?'试算草案 · 尚未生效':'候选试算 · 尚未选择';
+const sourceName=(id,v)=>id==='self'?'本社供给':(v.suppliers[id]?.name||id);
+const portionRows=(p,v)=>p?.portions?.map(x=>`<tr><td><strong>${esc(sourceName(x.source,v))}</strong></td><td>${qty(x.quantity)}</td><td>${at(x.due)}</td><td>${Date.parse(x.due)>Date.parse(v.order.originalDue)?'<span class="core-status core-status--warning">晚于原截止，须协商</span>':'在原截止内'}</td></tr>`).join('')||'<tr><td colspan="4">尚无试算组合。</td></tr>';
+function plots(v){
+ const groups=new Map();for(const b of liveBatches(v)){const id=b.plotId||'batch-'+b.id;if(!groups.has(id))groups.set(id,{id,name:b.plotName||'未登记地块 · '+b.id,batches:[]});groups.get(id).batches.push(b);}return [...groups.values()];
+}
+function field(v,profile){
+ const ps=plots(v);if(!ps.some(p=>p.id===selectedPlot))selectedPlot=ps.find(p=>p.batches.some(b=>v.checks.some(c=>c.batchId===b.id)))?.id||ps[0]?.id||'';
+ const selected=ps.find(p=>p.id===selectedPlot),bs=selected?.batches||[],area=profile?.plots?.find(p=>p.id===selectedPlot)?.areaMu;
+ const forecasts=new Map();for(const b of liveBatches(v)){const key=b.date+'|'+b.crop;if(!forecasts.has(key))forecasts.set(key,{date:b.date,crop:b.crop,total:0,actual:0,estimated:0});const r=forecasts.get(key);r.total+=num(b.potential);r.actual+=num(b.harvested);r.estimated+=num(b.remainingEstimated);}
+ const rows=[...forecasts.values()].sort((a,b)=>a.date.localeCompare(b.date)||a.crop.localeCompare(b.crop)),max=Math.max(1,...rows.map(r=>r.total));
+ const events=v.incidents.filter(i=>bs.some(b=>b.id===i.batchId));
+ const checks=bs.filter(b=>v.checks.some(c=>c.batchId===b.id));
+ return `<div class="core-two-columns"><section class="surface"><h2>田块总览</h2><p>${ps.length} 个已登记地块 · ${liveBatches(v).length} 个生产批次。选择田块，查看负责人、巡田和估量依据。</p><div class="core-plot-grid" aria-label="田块选择">${ps.map(p=>`<button type="button" data-core-plot="${esc(p.id)}" aria-controls="core-plot-detail" aria-pressed="${p.id===selectedPlot}"><strong>${esc(p.name)}</strong><small>${p.batches.map(b=>esc(b.id)+'批次').join(' / ')} · ${p.batches.some(b=>v.checks.some(c=>c.batchId===b.id))?'需复核':'已登记'}</small></button>`).join('')||'<p>暂无田块资料，请先在基础台账登记批次。</p>'}</div><p class="note">排列仅为田块示意，不代表真实地理位置；面积未登记时不推断面积。</p><div id="core-plot-detail" aria-live="polite"><h3>${esc(selected?.name||'暂无田块')}</h3><dl class="core-facts"><dt>农户</dt><dd>${[...new Set(bs.map(b=>b.farmerName||'归属未登记'))].map(esc).join('、')||'未登记'}</dd><dt>种植品种</dt><dd>${[...new Set(bs.map(b=>b.crop))].map(esc).join('、')||'未登记'}</dd><dt>面积</dt><dd>${area==null?'未登记':esc(area)+' 亩'}</dd><dt>采收段</dt><dd>${bs.map(b=>esc(b.id)+' · '+esc(b.harvestWindow||b.date)).join('<br>')||'未登记'}</dd></dl>${bs.map(b=>button('batch','核查 '+b.id+' 批次',`data-batch="${esc(b.id)}"`)).join(' ')}</div></section>
+ <section class="surface"><h2>田间监测与核查</h2><p>巡田与异常读取当前账本；温湿度为独立模拟采样。监测展示不会自动改变预计供给。</p><ul class="core-monitor-list">${bs.map(b=>`<li><strong>${esc(b.id)} · ${esc(b.forecastBasis||'人工记录')}</strong>最后更新 ${at(b.updatedAt)} · ${esc(b.checkedBy||'核查人未登记')}<br><span class="core-status${checks.some(c=>c.id===b.id)?' core-status--warning':''}">${checks.some(c=>c.id===b.id)?'影响近期订单，待现场复核':'当前无待核查提醒'}</span></li>`).join('')||'<li>请选择已登记田块。</li>'}${events.map(i=>`<li><strong>${esc(i.kind)} · ${esc(i.batchId)}</strong>${esc(i.description)}<br>${i.resolved?'已核实影响 '+qty(i.quantity):'影响数量待核实；上报不直接扣减供给'}</li>`).join('')}</ul>${monitoringSample(selectedPlot)}<p class="note">农户上报与核查事实在下方原表单保存。</p></section></div>
+ <section class="surface"><h2>供给预测：按品种和采收日查看</h2><p>${esc(profile?.quantityBasis||'依据当前批次估量与实际采收记录')}。原 ${at(v.order.originalDue)} 前，本社对 ${esc(v.order.id)} 预计可交 <strong>${qty(v.metrics.selfEstimated)}</strong>。</p><div class="core-forecast" role="img" aria-label="当前账本的每日各品种预计供给，详细数量见下表">${rows.map(r=>`<div class="core-forecast-row"><span>${esc(r.date.slice(5))}<small>${esc(r.crop)}</small></span><div class="core-bar"><span style="width:${Math.max(0,r.total/max*100).toFixed(2)}%"></span></div><strong>${qty(r.total)}</strong></div>`).join('')}</div><div class="core-table-wrap" tabindex="0" aria-label="每日供给数据表"><table class="core-table"><thead><tr><th>采收日</th><th>品种</th><th>可供估计</th><th>已实收</th><th>仍预计未采收</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(r.date)}</td><td>${esc(r.crop)}</td><td><strong>${qty(r.total)}</strong></td><td>${qty(r.actual)}</td><td>${qty(r.estimated)}</td></tr>`).join('')||'<tr><td colspan="5">暂无预测资料。</td></tr>'}</tbody></table></div><p class="note">“已实收”为采收事实，不等于买方验收；不同品种不可互相补缺，后续日期的供给不能充当今日库存。未登记的日期是未知，不标为零。</p><h3>所选田块的估量出处</h3>${bs.map(b=>`<p><strong>${esc(b.id)} · 预计 ${qty(b.amount)}</strong><br>${esc(b.forecastSource||'未登记估量出处，请核查')} · 更新 ${at(b.updatedAt)}</p>`).join('')}<div class="core-actions">${button('trial','进入组合试算 →')}</div></section>`;
+}
+function trial(v){
+ const p=plan(v),originalGap=Math.max(0,num(v.order.target)-num(v.metrics.selfEstimated));
+ return `<section class="surface"><h2>核心试算：这张订单怎样组合供给</h2><p>订单 ${esc(v.order.id)} · ${esc(v.order.crop)} · ${qty(v.order.target)} · 原截止 ${at(v.order.originalDue)}。</p><div class="core-source-parts">${mainBatches(v).map(b=>`<span>${esc(b.id)} 批次 · 预计 ${qty(b.allocatedEstimate)}</span>`).join('')}<span>原截止预计缺口 ${qty(originalGap)}</span></div><p class="core-boundary">下方原试算区可选择分批、延期或数量容差，调整草案数量与时间并保存。保存前的输入不参与结果；草案只有相关方确认且明确启用后才成为安排。</p>${p?`<h3>当前组合 · ${esc(planState(v))}</h3><div class="core-table-wrap" tabindex="0" aria-label="当前供给组合"><table class="core-table"><thead><tr><th>供给来源</th><th>拟供数量</th><th>约定时点</th><th>与原截止比较</th></tr></thead><tbody>${portionRows(p,v)}</tbody></table></div>`:''}<div class="core-actions">${button('results','查看供货建议与结果 →')}${button('field','返回田间数据')}</div></section>`;
+}
+function recommendation(v,p){
+ if(v.order.effectivePlan)return num(v.metrics.structuralUncovered)>0?'正式安排仍有 '+qty(v.metrics.structuralUncovered)+' 未覆盖，需要继续补救。':'当前安排已启用；请按约定时点逐笔采收、出库与验收。';
+ const gap=Math.max(0,num(v.order.target)-num(v.metrics.selfEstimated)),s=v.suppliers.P;
+ if(!gap)return '当前预计数量覆盖原订单；先核实待查批次，再确认供货安排。';
+ if(num(p?.uncovered)>0)return '当前组合仍差 '+qty(p.uncovered)+'，不能当作已补齐的结果。';
+ if(p?.planId==='tolerance')return '该组合需要采购方明确同意少收 '+qty(p.tolerance)+'；原订单目标仍保留。';
+ if(p?.planId==='delay')return '该组合把整单移到新交付时间，需采购方接受延期。';
+ if(s?.earliestAt&&Date.parse(s.earliestAt)>Date.parse(v.order.originalDue))return '保留原截止内的本社供给，向采购方协商分批补齐；外部供给赶不上原截止。';
+ return '核对候选供给的品种、数量和到达时间，再与相关方确认。';
+}
+function supplierRows(v){
+ return Object.values(v.suppliers).filter(s=>!s.archived).map(s=>{
+  const missing=s.comparisonOnly||s.candidateMax==null||!s.earliestAt;
+  const match=s.crop===v.order.crop,late=s.earliestAt&&Date.parse(s.earliestAt)>Date.parse(v.order.originalDue);
+  const status=!match?'品种不匹配':missing?'候选条件待核实':late?'赶不上原截止，需协商':'登记条件在原截止内，仍待确认';
+  const rate=v.history.bySupplier?.[s.id]?.onTimeRate;
+  return `<tr><td><strong>${esc(s.id)} · ${esc(s.name||'候选供给方')}</strong><small>${esc(s.contactBasis||'联系依据未登记')}</small></td><td>${s.candidateMax==null?'待核实':qty(s.candidateMax)}<small>${esc(s.crop||'品种未登记')}</small></td><td>${at(s.earliestAt)}</td><td><span class="core-status${missing||late||!match?' core-status--warning':''}">${status}</span><small>历史按时兑现 ${rate==null?'暂无已到期记录':Number(rate).toLocaleString('zh-CN',{maximumFractionDigits:1})+'%'}</small></td></tr>`;
+ }).join('')||'<tr><td colspan="4">暂无候选供给，先在基础台账核实资料。</td></tr>';
+}
+function results(v){
+ const p=plan(v),label=planState(v),accepted=num(v.metrics.accepted);
+ const compare=v.candidateComparison;
+ return `<section class="surface"><h2>供货建议</h2><span class="core-status${v.order.effectivePlan?'':' core-status--warning'}">${esc(label)}</span><p class="core-summary">${esc(recommendation(v,p))}</p><p>原订单 ${qty(v.order.target)}，原截止 ${at(v.order.originalDue)}。${p?'当前组合覆盖 '+qty(p.coverage)+'，对拟获准最低量仍差 '+qty(p.uncovered)+'。':''}</p><p class="core-boundary">${v.order.effectivePlan?'有效承诺不代表实际到货。':'候选试算和草案都不代表有效承诺。'}最终以买方合格验收为准；预计、承诺、出库与验收分开记录。</p><div class="core-actions">${button('trial',v.draft?'返回草案继续确认':'返回组合试算调整')}${button('records','查看交付与验收')}</div></section>
+ <section class="surface"><h2>匹配结果：品种、数量与交付时间</h2><div class="core-table-wrap" tabindex="0" aria-label="供给来源匹配"><table class="core-table"><thead><tr><th>候选供给</th><th>登记可供量</th><th>最早时间</th><th>匹配说明</th></tr></thead><tbody>${supplierRows(v)}</tbody></table></div><p class="note">候选数量不计入有效承诺；Q 若只有历史记录，不凭兑现率补造可供数量。没有核对价格、运输和品质，不表示真实采购撮合。</p>${p?`<h3>输出安排 · ${esc(p.label)}</h3><div class="core-table-wrap" tabindex="0" aria-label="试算安排输出"><table class="core-table"><thead><tr><th>供给来源</th><th>拟供数量</th><th>交付时间</th><th>时间约束</th></tr></thead><tbody>${portionRows(p,v)}</tbody></table></div>`:''}</section>
+ <section class="surface"><h2>输出结果与履约回流</h2><dl class="core-facts"><dt>买方合格验收</dt><dd>${qty(accepted)} ／ 最低要求 ${qty(v.order.minimumRequired)}</dd><dt>尚待验收</dt><dd>${qty(v.metrics.remaining)}</dd><dt>历史迟交留痕</dt><dd>${qty(v.metrics.historicalLate)}，补齐后仍保留原承诺记录</dd><dt>P 历史按时兑现</dt><dd>${v.history.P.onTimeRate==null?'暂无已到期记录':Number(v.history.P.onTimeRate).toLocaleString('zh-CN',{maximumFractionDigits:1})+'%'}，供下次选择参考</dd></dl>${compare?`<h3>已登记的下次需求比较</h3><p>${esc(compare.inquiry.crop)} · ${qty(compare.inquiry.quantity)} · ${at(compare.inquiry.due)}</p><ol>${compare.rows.map(r=>`<li>${esc(r.name||r.id)} · ${r.eligible?'符合已登记条件':esc(r.reasons.join('；'))} · ${r.onTimeRate==null?'暂无历史':Number(r.onTimeRate).toLocaleString('zh-CN',{maximumFractionDigits:1})+'% 按时兑现'}</li>`).join('')}</ol><p class="note">这是原模型按已登记条件生成的比较，未增加新权重或信用评分。</p>`:''}<div class="core-actions">${button('summary','下载供货建议摘要（TXT）')}${button('json','导出完整账本 JSON')}${button('csv','导出台账 CSV')}</div><p class="note">摘要会注明试算、草案或正式安排状态；JSON／CSV仍由原导出按钮生成。下载和查看不新增业务事实。</p></section>`;
+}
+function refresh(){
+ const c=context();if(!c||!originals)return;
+ const daily=document.body.dataset.roleMode==='daily'&&document.body.dataset.activeRole==='manager';
+ $('#core-workflow').hidden=!daily;$('#core-field-data').hidden=!daily;$('#core-trial-context').hidden=!daily||remedyPage==='results';$('#core-results').hidden=!daily||remedyPage!=='results';$('#content-remedy').hidden=daily&&remedyPage==='results';
+ $('#title-supply').textContent=daily?'田间数据':originals.supply;$('#title-supply').nextElementSibling.textContent=daily?'先看田块和监测记录，再核查各采收日的供给预测。':originals.supplyCopy;
+ $('#title-remedy').textContent=daily?(remedyPage==='results'?'供货建议与结果':'组合试算'):originals.remedy;$('#title-remedy').nextElementSibling.textContent=daily?(remedyPage==='results'?'核对匹配条件与交付安排，再导出当前结果。':'按当前订单比较供给组合，调整条件并完成相关方确认。'):originals.remedyCopy;
+ const current=c.active==='supply'?'field':c.active==='remedy'?remedyPage:'';
+ for(const b of document.querySelectorAll('#core-workflow [data-core-page]'))b.setAttribute('aria-current',b.dataset.corePage===current?'page':'false');
+ if(!daily)return;
+ $('#core-field-data').innerHTML=field(c.view,c.profile);$('#core-trial-context').innerHTML=trial(c.view);$('#core-results').innerHTML=results(c.view);
+ // 窄屏将新增表格按来源逐行阅读；列名仍由同一张表的表头取得。
+ for(const table of document.querySelectorAll('.core-region .core-table')){
+  const labels=[...table.querySelectorAll('thead th')].map(th=>th.textContent);
+  for(const row of table.querySelectorAll('tbody tr'))[...row.children].forEach((td,i)=>{if(!td.hasAttribute('colspan'))td.dataset.label=labels[i]||'';});
+ }
+}
+function open(page){
+ const c=context();if(!c||document.body.dataset.activeRole!=='manager'||document.body.dataset.roleMode!=='daily')return;
+ const target=page==='field'?'supply':'remedy';if(page!=='field')remedyPage=page;
+ if(c.active===target)refresh();else global.YimuRoleHost.go(target);
+ refresh();const heading=$('#title-'+target);heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true});$('#view-'+target).scrollIntoView({block:'start',behavior:'auto'});
+}
+function exportSummary(){
+ const v=context().view,p=plan(v);
+ const lines=['一亩先知 · 供货建议摘要','业务数据为合成演示样例','结果类型：'+planState(v),'模拟时点：'+v.clock.now,'订单：'+v.order.id+' · '+v.order.crop+' · '+qty(v.order.target),'原截止：'+v.order.originalDue,'建议：'+recommendation(v,p),''];
+ if(p){lines.push('组合：'+p.label,'覆盖：'+qty(p.coverage),'未覆盖拟获准最低量：'+qty(p.uncovered));p.portions.forEach(x=>lines.push(sourceName(x.source,v)+'：'+qty(x.quantity)+'，截止 '+x.due));}
+ lines.push('','实际合格验收：'+qty(v.metrics.accepted),'历史迟交：'+qty(v.metrics.historicalLate),'预计与承诺均不代表验收；候选资料仍须人工核实。');
+ const blob=new Blob([lines.join('\r\n')+'\r\n'],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='一亩先知-供货建议-'+v.order.id+'-'+v.clock.date+'.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
+}
+function boot(){
+ originals={supply:$('#title-supply').textContent,supplyCopy:$('#title-supply').nextElementSibling.textContent,remedy:$('#title-remedy').textContent,remedyCopy:$('#title-remedy').nextElementSibling.textContent};
+ const schedule=()=>{if(queued)return;queued=true;queueMicrotask(()=>{queued=false;refresh();});};
+ const observer=new MutationObserver(schedule);for(const id of ['content-supply','content-remedy','content-records'])observer.observe($('#'+id),{childList:true});
+ observer.observe(document.body,{attributes:true,attributeFilter:['data-role-mode','data-active-role']});
+ document.addEventListener('click',e=>{
+  const original=e.target.closest('[data-view="remedy"],[data-target="remedy"],[data-action="select-plan"]');if(original&&!original.matches('[data-core-page]'))remedyPage='trial';
+ },true);
+ document.addEventListener('click',e=>{
+  const page=e.target.closest('[data-core-page]');if(page){open(page.dataset.corePage);return;}
+  const plot=e.target.closest('[data-core-plot]');if(plot){selectedPlot=plot.dataset.corePlot;const focusKey=selectedPlot;refresh();document.querySelector(`[data-core-plot="${CSS.escape(focusKey)}"]`)?.focus({preventScroll:true});return;}
+  const b=e.target.closest('[data-core-action]');if(!b)return;const c=context();if(!c||document.body.dataset.activeRole!=='manager'||document.body.dataset.roleMode!=='daily')return;
+  const a=b.dataset.coreAction;if(['field','trial','results'].includes(a)){open(a);return;}
+  if(a==='batch'){global.YimuRoleHost.go('supply',b.dataset.batch);const form=document.querySelector(`form[data-form="batch"][data-id="${CSS.escape(b.dataset.batch)}"]`);form?.scrollIntoView({block:'center',behavior:'auto'});form?.querySelector('input')?.focus({preventScroll:true});}
+  if(a==='records')global.YimuRoleHost.go('records');
+  if(a==='json')$('#export-json').click();if(a==='csv')$('#export-csv').click();if(a==='summary')exportSummary();
+ });
+ refresh();
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
+})(window);
+</script>
 </head>
 <body class="cover-active" data-role-mode="portal" data-active-role="manager">
   <svg width="0" height="0" class="glass-filter-definitions" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" style="position:absolute;pointer-events:none">
@@ -5057,6 +5242,14 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
         <div id="operator-content"></div>
         <div id="operator-form-slot" class="role-form-slot" data-role-form-slot></div>
       </section>
+      <nav id="core-workflow" class="core-workflow" aria-label="核心决策流程" hidden>
+        <p>看田间数据，试算供给组合，再核对供货结果。</p>
+        <div class="core-steps">
+          <button type="button" data-core-page="field" aria-controls="view-supply"><span>1</span><strong>田间数据</strong><small>田块 · 核查 · 预测</small></button>
+          <button type="button" data-core-page="trial" aria-controls="view-remedy"><span>2</span><strong>组合试算</strong><small>来源 · 数量 · 时间</small></button>
+          <button type="button" data-core-page="results" aria-controls="core-results"><span>3</span><strong>供货建议与结果</strong><small>匹配 · 安排 · 输出</small></button>
+        </div>
+      </nav>
       <section id="view-workbench" class="business-view" aria-labelledby="title-workbench">
         <div class="view-heading">
           <h1 id="title-workbench">今天哪张订单需要处理</h1>
@@ -5070,6 +5263,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
           <h1 id="title-supply">未来供给</h1>
           <p>按批次核查预计采收与可交付安排，查看变化影响了哪些日期和订单。</p>
         </div>
+        <div id="core-field-data" class="core-region" hidden></div>
         <div class="supply-page-grid">
           <div id="content-supply" class="content-region"></div>
           <figure id="fieldScene" class="field-scene" aria-label="田野场景示意">
@@ -5094,7 +5288,9 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
           <h1 id="title-remedy">订单处置</h1>
           <p>比较补救安排，核对需要协商的条件，再记录各方确认结果。</p>
         </div>
+        <div id="core-trial-context" class="core-region" hidden></div>
         <div id="content-remedy" class="content-region"></div>
+        <section id="core-results" class="core-region" aria-label="供货建议与结果" hidden></section>
       </section>
 
       <section id="view-records" class="business-view" aria-labelledby="title-records" hidden>
